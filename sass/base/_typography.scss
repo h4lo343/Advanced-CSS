@@ -20,6 +20,10 @@ body {
 
     animation: moveInLeft 1s ease-out;
 
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
 
     /*animation-name: moveInLeft;*/
     /*animation-duration: 1s;*/
@@ -39,6 +43,11 @@ body {
     /*animation-name: moveInRight;*/
     /*animation-duration: 1s;*/
     /*animation-timing-function: ease-out;*/
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
+
   }
 }
 
@@ -52,6 +61,14 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all .2s;
+
+  @include respond(tab-port) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(11deg) scale(1.1);

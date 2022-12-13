@@ -13,7 +13,7 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
-    <div class="navigation">
+        <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
         <label for="navi-toggle" class="navigation__button">
@@ -77,9 +77,31 @@
                      </div>
                      <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="./img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                            <img src="./img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="./img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+
+                            <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw"
+                                 alt="Photo 1"
+                                 class="composition__photo composition__photo--p1"
+                                 src="./img/nat-1-large.jpg"
+                            >
+
+                            <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw,"
+                                 alt="Photo 2"
+                                 class="composition__photo composition__photo--p2"
+                                 src="./img/nat-2-large.jpg"
+                            >
+
+                            <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                                 sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw,"
+                                 alt="Photo 3"
+                                 class="composition__photo composition__photo--p3"
+                                 src="./img/nat-3-large.jpg"
+                            >
+
+<!--                            <img src="./img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo&#45;&#45;p1">-->
+<!--                            <img src="./img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo&#45;&#45;p2">-->
+<!--                            <img src="./img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo&#45;&#45;p3">-->
                         </div>
                      </div>
                  </div>
@@ -161,11 +183,11 @@
                             </div>
                             <div class="card__side card__side--back card__side--back-1">
                                 <div class="card__cta">
-                                    <div class="card__price--box">
-                                        <p class="card__price--only">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">
                                             Only
                                         </p>
-                                        <p class="card__price--value">
+                                        <p class="card__price-value">
                                             $297
                                         </p>
                                         <a href="#popup" class="btn btn--white">Book now!</a>
@@ -197,11 +219,11 @@
                             </div>
                             <div class="card__side card__side--back card__side--back-2">
                                 <div class="card__cta">
-                                    <div class="card__price--box">
-                                        <p class="card__price--only">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">
                                             Only
                                         </p>
-                                        <p class="card__price--value">
+                                        <p class="card__price-value">
                                             $497
                                         </p>
                                         <a href="#popup" class="btn btn--white">Book now!</a>
@@ -233,11 +255,11 @@
                             </div>
                             <div class="card__side card__side--back card__side--back-3">
                                 <div class="card__cta">
-                                    <div class="card__price--box">
-                                        <p class="card__price--only">
+                                    <div class="card__price-box">
+                                        <p class="card__price-only">
                                             Only
                                         </p>
-                                        <p class="card__price--value">
+                                        <p class="card__price-value">
                                             $897
                                         </p>
                                         <a href="#popup" class="btn btn--white">Book now!</a>
@@ -366,7 +388,12 @@
 
         <footer class="footer">
             <div class="footer__logo-box">
-                <img src="./img/logo-green-1x.png" alt="Full Logo" class="footer__logo">
+
+                <picture class="footer__logo">
+                    <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                    <img srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x" alt="Full Logo" src="./img/logo-green-2x.png">
+                </picture>
+
             </div>
             <div class="row">
                 <div class="col-1-of-2">
